@@ -1,4 +1,31 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
     <string name="app_name">若谷电子证书·读</string>
+    <string name="text_tag_not_supported">证书标签 (%s) 不受支持</string>
+    <string name="text_new_tag">发现证书标签: %s</string>
+    <string name="text_nfc_failure">Nfc错误</string>
+    <string name="text_exit_app">退出应用</string>
+    <string name="text_nfc_state_error">Nfc 状态错误: %s</string>
+    <string name="text_exception_coroutine">寄: %s</string>
+    <string name="text_tag_lost">证书标签已移除</string>
+    <string name="text_continue">继续</string>
+    <string name="text_io_error">Nfc 输入输出错误（标签数据错误或者移开标签过早）</string>
+    <string name="text_reading_tag">正在读取证书标签</string>
+    <string name="label_tap_tag">读取标签以继续…</string>
+    <string name="text_illegal_tag">无效的证书标签</string>
+    <string name="label_card_type">证书类型</string>
+    <string name="label_serial_number">序列号</string>
+    <string name="label_card_type_ecert_v1">第一代若谷工作室礼品电子证书</string>
+    <string name="label_issuance_time">颁发时间</string>
+    <string name="label_issuer">颁发者</string>
+    <string name="label_recipient">收件人</string>
+    <string name="label_gift_reason">获赠原因</string>
+    <string name="label_description">描述</string>
+    <string name="label_postscript">附言</string>
+    <string name="label_certificate_valid">此证书有效</string>
+    <string name="label_cert_info_title">证书相关信息</string>
+    <string name="text_ruogu_studio">若谷工作室</string>
+    <string name="text_roa_server">元点服务器</string>
+    <string name="text_unknown">未知</string>
+    <string name="label_certificate_invalid">此证书无法通过验证</string>
 </resources>

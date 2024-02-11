@@ -1,4 +1,31 @@
 <resources>
     <string name="app_name">Ruogu ECert Reader</string>
+    <string name="text_tag_not_supported">Tag (%s) Not Supported.</string>
+    <string name="text_new_tag">Found Tag: %s</string>
+    <string name="text_nfc_failure">Nfc Failure</string>
+    <string name="text_exit_app">Exit App</string>
+    <string name="text_nfc_state_error">Illegal Nfc State: %s</string>
+    <string name="text_exception_coroutine">Exception in coroutine: %s</string>
+    <string name="text_tag_lost">Tag Lost</string>
+    <string name="text_continue">Continue</string>
+    <string name="text_io_error">Nfc I/O Error</string>
+    <string name="text_reading_tag">Reading Tag</string>
+    <string name="label_tap_tag">Tap Tag to Reveal</string>
+    <string name="text_illegal_tag">Illegal Certificate tag</string>
+    <string name="label_card_type">Tag Type</string>
+    <string name="label_serial_number">Serial Number</string>
+    <string name="label_card_type_ecert_v1">Ruogu Studio Gift ECert Revision 1</string>
+    <string name="label_issuance_time">Issuance Time</string>
+    <string name="label_issuer">Issuer</string>
+    <string name="label_recipient">Recipient</string>
+    <string name="label_gift_reason">Gift Reason</string>
+    <string name="label_description">Description</string>
+    <string name="label_postscript">Postscript</string>
+    <string name="label_certificate_valid">Certificate Valid</string>
+    <string name="label_cert_info_title">Certificate Info</string>
+    <string name="text_ruogu_studio">Ruogu Studio</string>
+    <string name="text_roa_server">ROA Server</string>
+    <string name="text_unknown">UNKNOWN</string>
+    <string name="label_certificate_invalid">Certificate Invalid</string>
 
 </resources>

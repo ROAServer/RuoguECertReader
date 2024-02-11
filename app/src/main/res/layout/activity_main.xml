@@ -7,4 +7,12 @@
     android:fitsSystemWindows="true"
     tools:context=".MainActivity">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="@string/label_tap_tag"
+        style="?textAppearanceTitleLarge"/>
+
+
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
