@@ -1,3 +1,4 @@
+
 <resources>
     <string name="app_name">Ruogu ECert Reader</string>
     <string name="text_tag_not_supported">Tag (%s) Not Supported.</string>
@@ -26,6 +27,7 @@
     <string name="text_ruogu_studio">Ruogu Studio</string>
     <string name="text_roa_server">ROA Server</string>
     <string name="text_unknown">UNKNOWN</string>
-    <string name="label_certificate_invalid">Certificate Invalid</string>
-
+    <string name="label_certificate_invalid">Certificate Invalid\nCause: %s</string>
+    <string name="text_unknown_issuer">Unknown Issuer</string>
+    <string name="text_invalid_signature">Signature Invalid</string>
 </resources>

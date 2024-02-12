@@ -14,11 +14,13 @@ class ECertV1DataAdapter :
         val byteBuffer = ByteBuffer.wrap(bytes)
         byteBuffer.position(16 + 2 + 8 + 1);
         repeat(4){
-            val len = byteBuffer.getLongLE()
-            byteBuffer.position((byteBuffer.position() + len).toInt())
+            val len = byteBuffer.getLongLE().toInt()
+            repeat(len){byteBuffer.get()}
+            //byteBuffer.position((byteBuffer.position() + len).toInt())
         }
         val len = byteBuffer.position()
         val byteArray = ByteArray(len)
+        println(len)
         byteBuffer.position(0)
         byteBuffer.get(byteArray, 0, len)
         return byteArray
@@ -30,6 +32,7 @@ class ECertV1DataAdapter :
         byteBuffer.position(16)
         if (version.toInt() != 1) throw IllegalArgumentException()
         val cardHeader = CardHeader(version)
+
         val serialNumber = byteBuffer.getShortLE().toInt()
         val timeStamp = byteBuffer.getLongLE()
         val issuer = byteBuffer.get().toInt()
@@ -38,12 +41,15 @@ class ECertV1DataAdapter :
         val giftReason = byteBuffer.getString()
         val description = byteBuffer.getString()
         val postscript = byteBuffer.getString()
-        val signature = ByteArray(64)
-        val pos = byteBuffer.position()
+
+        val signatureSize = byteBuffer.getLongLE().toInt()
+        println(signatureSize)
+        val signature = ByteArray(signatureSize)
         var index = 0
-        for (i in pos until pos + 64) {
+        repeat(signatureSize){
             signature[index++] = byteBuffer.get()
         }
+
         return ECertV1(
             cardHeader,
             serialNumber,

@@ -16,7 +16,7 @@ class ECertV1(parcel: Parcel?) : Parcelable {
     lateinit var giftReason: String
     lateinit var description: String
     lateinit var postscript: String
-    var signature: ByteArray = ByteArray(64)
+    var signature: ByteArray = ByteArray(70)
 
     init {
         if (parcel != null) {
@@ -32,6 +32,8 @@ class ECertV1(parcel: Parcel?) : Parcelable {
             giftReason = parcel.readString()!!
             description = parcel.readString()!!
             postscript = parcel.readString()!!
+            val signatureLength = parcel.readInt()
+            signature = ByteArray(signatureLength)
             parcel.readByteArray(signature)
         }
     }
@@ -55,7 +57,7 @@ class ECertV1(parcel: Parcel?) : Parcelable {
         this.giftReason = giftReason
         this.description = description
         this.postscript = postscript
-        System.arraycopy(signature, 0, this.signature, 0, 64)
+        this.signature = signature
     }
 
     override fun writeToParcel(parcel: Parcel, flags: Int) {
@@ -67,6 +69,7 @@ class ECertV1(parcel: Parcel?) : Parcelable {
         parcel.writeString(giftReason)
         parcel.writeString(description)
         parcel.writeString(postscript)
+        parcel.writeInt(signature.size)
         parcel.writeByteArray(signature)
     }
 

@@ -27,5 +27,7 @@
     <string name="text_ruogu_studio">若谷工作室</string>
     <string name="text_roa_server">元点服务器</string>
     <string name="text_unknown">未知</string>
-    <string name="label_certificate_invalid">此证书无法通过验证</string>
+    <string name="label_certificate_invalid">此证书无法通过验证\n原因：%s</string>
+    <string name="text_unknown_issuer">未知颁发者</string>
+    <string name="text_invalid_signature">签名无效</string>
 </resources>
