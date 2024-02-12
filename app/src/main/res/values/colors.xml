@@ -4,5 +4,5 @@
     <color name="white">#FFFFFFFF</color>
 
     <color name="certInvalid">#FFD740</color>
-    <color name="certValid">#B2FF59</color>
+    <color name="certValid">#67C23A</color>
 </resources>
