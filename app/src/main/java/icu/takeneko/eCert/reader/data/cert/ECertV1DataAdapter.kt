@@ -20,7 +20,6 @@ class ECertV1DataAdapter :
         }
         val len = byteBuffer.position()
         val byteArray = ByteArray(len)
-        println(len)
         byteBuffer.position(0)
         byteBuffer.get(byteArray, 0, len)
         return byteArray
@@ -43,7 +42,6 @@ class ECertV1DataAdapter :
         val postscript = byteBuffer.getString()
 
         val signatureSize = byteBuffer.getLongLE().toInt()
-        println(signatureSize)
         val signature = ByteArray(signatureSize)
         var index = 0
         repeat(signatureSize){

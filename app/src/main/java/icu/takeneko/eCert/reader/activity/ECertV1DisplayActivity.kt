@@ -36,10 +36,6 @@ class ECertV1DisplayActivity : DisplayActivity<ECertV1>(ECertV1::class.java) {
             validCertificate = false
             cause += getString(R.string.text_unknown_issuer)
         }
-        println(R.string.text_unknown)
-        println(R.string.text_roa_server)
-        println(R.string.text_ruogu_studio)
-        println(matchResult)
         binding.textIssuer.text = getString(matchResult)
         binding.textRecipient.text = data.recipient
         binding.textGiftReason.text = data.giftReason
