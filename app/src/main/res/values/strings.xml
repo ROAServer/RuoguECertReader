@@ -30,4 +30,6 @@
     <string name="label_certificate_invalid">Certificate Invalid\nCause: %s</string>
     <string name="text_unknown_issuer">Unknown Issuer</string>
     <string name="text_invalid_signature">Signature Invalid</string>
+    <string name="label_powered_by">Powered By</string>
+    <string name="label_copyright">Copyright ®2020 RuoguStudio. Licensed under GNU Public License Version 3</string>
 </resources>
