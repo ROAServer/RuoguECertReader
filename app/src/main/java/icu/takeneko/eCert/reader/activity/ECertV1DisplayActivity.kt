@@ -21,6 +21,10 @@ class ECertV1DisplayActivity : DisplayActivity<ECertV1>(ECertV1::class.java) {
         super.onCreate(savedInstanceState)
         binding = ActivityEcertV1DisplayBinding.inflate(layoutInflater)
         setContentView(binding.main)
+        setSupportActionBar(binding.toolbar)
+        binding.toolbar.setNavigationOnClickListener {
+            this.finish()
+        }
         logI(data.toString())
         signatureChecker = SignatureChecker(this, "ecert_v1")
         displayCert()
