@@ -30,6 +30,6 @@
     <string name="label_certificate_invalid">此证书无法通过验证\n原因：%s</string>
     <string name="text_unknown_issuer">未知颁发者</string>
     <string name="text_invalid_signature">签名无效</string>
-    <string name="label_powered_by">Powered By</string>
-    <string name="label_copyright">Copyright ®2020 RuoguStudio. Licensed under GNU Public License Version 3</string>
+    <string name="label_powered_by">技术支持来自</string>
+    <string name="label_copyright">版权所有 ®2024 若谷工作室.\n 根据 GNU 公共许可证第三版授权使用 </string>
 </resources>
