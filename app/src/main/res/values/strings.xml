@@ -35,5 +35,5 @@
     <string name="label_participate_part">Participate Part</string>
     <string name="label_link">Link</string>
     <string name="label_credits">Credits</string>
-    <string name="label_license">Licensed under GNU Public License Version 3</string>
+    <string name="label_license">Licensed under GNU Public License Version 3.\n This program comes with ABSOLUTELY NO WARRANTY;\nThis is free software, and you are welcome to redistribute it under certain conditions.</string>
 </resources>

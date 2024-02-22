@@ -35,5 +35,5 @@
     <string name="label_participate_part">参与部分</string>
     <string name="label_link">相关链接</string>
     <string name="label_credits">制作人员</string>
-    <string name="label_license">根据 GNU 公共许可证第三版授权使用</string>
+    <string name="label_license">根据 GNU 公共许可证第三版授权使用。本程序绝对无担保，\n本软件为免费软件，欢迎您在特定条件下重新发布。</string>
 </resources>
