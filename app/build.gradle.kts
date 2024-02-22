@@ -58,6 +58,7 @@ dependencies {
     implementation(libs.androidx.activity.ktx)
     implementation(libs.androidx.fragment.ktx)
     implementation(libs.androidx.activity)
+    implementation(libs.gson)
     testImplementation(libs.junit)
 
     androidTestImplementation(libs.androidx.test.ext.junit)

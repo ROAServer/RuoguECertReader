@@ -1,6 +1,7 @@
 package icu.takeneko.eCert.reader
 
 import android.content.Intent
+import android.net.Uri
 import android.nfc.NfcAdapter
 import android.nfc.Tag
 import android.nfc.TagLostException
@@ -13,9 +14,11 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
+import com.blankj.utilcode.util.ActivityUtils
 import com.blankj.utilcode.util.ToastUtils
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.progressindicator.CircularProgressIndicator
+import icu.takeneko.eCert.reader.activity.CreditsActivity
 import icu.takeneko.eCert.reader.data.DataAdapters
 import icu.takeneko.eCert.reader.databinding.ActivityMainBinding
 import icu.takeneko.eCert.reader.nfc.NfcTag
@@ -43,6 +46,23 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
+        binding.textPoweredBy.setOnClickListener {
+            ActivityUtils.startActivity(CreditsActivity::class.java)
+        }
+        binding.labelCopyright.setOnClickListener {
+            val uri = Uri.parse("https://github.com/ROAServer")
+            val intent = Intent()
+            intent.setAction("android.intent.action.VIEW")
+            intent.setData(uri)
+            startActivity(intent)
+        }
+        binding.labelLicense.setOnClickListener {
+            val uri = Uri.parse("https://www.gnu.org/licenses/gpl-3.0.en.html")
+            val intent = Intent()
+            intent.setAction("android.intent.action.VIEW")
+            intent.setData(uri)
+            startActivity(intent)
+        }
     }
 
     override fun onResume() {
@@ -85,11 +105,11 @@ class MainActivity : AppCompatActivity() {
                     logI("Blocks: ${blocks.joinToString(", ")}")
                     val content = readBlocksToByteArray(*(blocks.toIntArray()))
                     logI(hexView(content))
-                    try{
+                    try {
                         DataAdapters.tryStartActivity(this@MainActivity, content)
-                    }catch (e:IllegalArgumentException){
+                    } catch (e: IllegalArgumentException) {
                         e.printStackTrace()
-                        launch(Dispatchers.Main){
+                        launch(Dispatchers.Main) {
                             waitingDialog.dismiss()
                             MaterialAlertDialogBuilder(this@MainActivity)
                                 .setTitle(R.string.text_illegal_tag)
@@ -105,7 +125,7 @@ class MainActivity : AppCompatActivity() {
                 }
             } catch (e: IOException) {
                 Log.e("ECert", "readTagIfAvailable: ", e)
-                launch(Dispatchers.Main){
+                launch(Dispatchers.Main) {
                     waitingDialog.dismiss()
                     MaterialAlertDialogBuilder(this@MainActivity)
                         .setTitle(R.string.text_nfc_failure)

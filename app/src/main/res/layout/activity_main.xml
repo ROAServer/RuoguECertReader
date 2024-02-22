@@ -31,7 +31,8 @@
         </LinearLayout>
 
         <LinearLayout
-            android:layout_width="match_parent"
+            android:id="@+id/text_powered_by"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:gravity="center"
@@ -59,21 +60,31 @@
             </com.google.android.material.card.MaterialCardView>
 
         </LinearLayout>
+
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
             android:layout_marginHorizontal="10dp"
             android:gravity="center"
-            android:orientation="horizontal">
+            android:orientation="vertical">
 
             <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/label_copyright"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:gravity="center"
                 style="?textAppearanceBodySmall"
                 android:layout_gravity="center"
                 android:text="@string/label_copyright" />
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/label_license"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                style="?textAppearanceBodySmall"
+                android:layout_gravity="center"
+                android:text="@string/label_license" />
         </LinearLayout>
     </LinearLayout>
 
